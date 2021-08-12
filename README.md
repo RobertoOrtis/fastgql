@@ -1,12 +1,12 @@
 # fastgql
 
+(fix webosckets)
 ![gqlgen](https://user-images.githubusercontent.com/46195831/89802919-0bb8ef00-db2a-11ea-8ba4-88e7a58b2fd2.png)
 
 ## What is fastgql?
 
 [gqlgen](https://github.com/99designs/gqlgen) is a Go library for building GraphQL servers without any fuss.<br/>
 [fastgql](https://github.com/RobertoOrtis/fastgql) This fork adds [fasthttp](https://github.com/valyala/fasthttp) support to the latest version of [gqlgen](https://github.com/99designs/gqlgen).<br/>
-
 
 - **gqlgen is based on a Schema first approach** — You get to Define your API using the GraphQL [Schema Definition Language](http://graphql.org/learn/schema/).
 - **gqlgen prioritizes Type safety** — You should never see `map[string]interface{}` here.
@@ -15,7 +15,8 @@
 Still not convinced enough to use **gqlgen**? Compare **gqlgen** with other Go graphql [implementations](https://gqlgen.com/feature-comparison/)
 
 ## Getting Started
-- To install gqlgen run the command `go get github.com/RobertoOrtis/fastgql` in your project directory.<br/> 
+
+- To install gqlgen run the command `go get github.com/RobertoOrtis/fastgql` in your project directory.<br/>
 - You could initialize a new project using the recommended folder structure by running this command `go run github.com/RobertoOrtis/fastgql init`.
 
 First work your way through the [Getting Started](https://gqlgen.com/getting-started/) tutorial.
@@ -93,6 +94,7 @@ func main() {
   log.Fatal(app.Listen(":8080"))
 }
 ```
+
 You could find a more comprehensive guide to help you get started [here](https://gqlgen.com/getting-started/).<br/>
 We also have a couple of real-world [examples](https://github.com/RobertoOrtis/fastgql/tree/master/example) that show how to GraphQL applications with **gqlgen** seamlessly,
 You can see these [examples](https://github.com/RobertoOrtis/fastgql/tree/master/example) here or visit [godoc](https://godoc.org/github.com/99designs/gqlgen).
@@ -104,6 +106,7 @@ If you think you've found a bug, or something isn't behaving the way you think i
 ## Contributing
 
 We welcome contributions, Read our [Contribution Guidelines](https://github.com/RobertoOrtis/fastgql/blob/master/CONTRIBUTING.md) to learn more about contributing to **gqlgen**
+
 ## Frequently asked questions
 
 ### How do I prevent fetching child objects that might not be used?
