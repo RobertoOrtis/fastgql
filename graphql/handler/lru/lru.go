@@ -3,7 +3,7 @@ package lru
 import (
 	"context"
 
-	"github.com/arsmn/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql"
 	lru "github.com/hashicorp/golang-lru"
 )
 

@@ -1,4 +1,4 @@
-module github.com/arsmn/fastgql
+module github.com/RobertoOrtis/fastgql
 
 go 1.12
 

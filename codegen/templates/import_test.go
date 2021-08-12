@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/arsmn/fastgql/internal/code"
+	"github.com/RobertoOrtis/fastgql/internal/code"
 
 	"github.com/stretchr/testify/require"
 )
@@ -14,9 +14,9 @@ func TestImports(t *testing.T) {
 	wd, err := os.Getwd()
 	require.NoError(t, err)
 
-	aBar := "github.com/arsmn/fastgql/codegen/templates/testdata/a/bar"
-	bBar := "github.com/arsmn/fastgql/codegen/templates/testdata/b/bar"
-	mismatch := "github.com/arsmn/fastgql/codegen/templates/testdata/pkg_mismatch"
+	aBar := "github.com/RobertoOrtis/fastgql/codegen/templates/testdata/a/bar"
+	bBar := "github.com/RobertoOrtis/fastgql/codegen/templates/testdata/b/bar"
+	mismatch := "github.com/RobertoOrtis/fastgql/codegen/templates/testdata/pkg_mismatch"
 
 	t.Run("multiple lookups is ok", func(t *testing.T) {
 		a := Imports{destDir: wd, packages: &code.Packages{}}
@@ -28,7 +28,7 @@ func TestImports(t *testing.T) {
 	t.Run("lookup by type", func(t *testing.T) {
 		a := Imports{destDir: wd, packages: &code.Packages{}}
 
-		pkg := types.NewPackage("github.com/arsmn/fastgql/codegen/templates/testdata/b/bar", "bar")
+		pkg := types.NewPackage("github.com/RobertoOrtis/fastgql/codegen/templates/testdata/b/bar", "bar")
 		typ := types.NewNamed(types.NewTypeName(0, pkg, "Boolean", types.Typ[types.Bool]), types.Typ[types.Bool], nil)
 
 		require.Equal(t, "bar.Boolean", a.LookupType(typ))
@@ -59,9 +59,9 @@ func TestImports(t *testing.T) {
 
 		require.Equal(
 			t,
-			`"github.com/arsmn/fastgql/codegen/templates/testdata/a/bar"
-bar1 "github.com/arsmn/fastgql/codegen/templates/testdata/b/bar"
-turtles "github.com/arsmn/fastgql/codegen/templates/testdata/pkg_mismatch"`,
+			`"github.com/RobertoOrtis/fastgql/codegen/templates/testdata/a/bar"
+bar1 "github.com/RobertoOrtis/fastgql/codegen/templates/testdata/b/bar"
+turtles "github.com/RobertoOrtis/fastgql/codegen/templates/testdata/pkg_mismatch"`,
 			a.String(),
 		)
 	})
@@ -72,8 +72,8 @@ turtles "github.com/arsmn/fastgql/codegen/templates/testdata/pkg_mismatch"`,
 		_, _ = a.Reserve(aBar, "abar")
 		_, _ = a.Reserve(bBar, "bbar")
 
-		require.Equal(t, `abar "github.com/arsmn/fastgql/codegen/templates/testdata/a/bar"
-bbar "github.com/arsmn/fastgql/codegen/templates/testdata/b/bar"`, a.String())
+		require.Equal(t, `abar "github.com/RobertoOrtis/fastgql/codegen/templates/testdata/a/bar"
+bbar "github.com/RobertoOrtis/fastgql/codegen/templates/testdata/b/bar"`, a.String())
 	})
 
 }

@@ -6,8 +6,8 @@ package graph
 import (
 	"context"
 
-	"github.com/arsmn/fastgql/example/federation/products/graph/generated"
-	"github.com/arsmn/fastgql/example/federation/products/graph/model"
+	"github.com/RobertoOrtis/fastgql/example/federation/products/graph/generated"
+	"github.com/RobertoOrtis/fastgql/example/federation/products/graph/model"
 )
 
 func (r *entityResolver) FindProductByUpc(ctx context.Context, upc string) (*model.Product, error) {

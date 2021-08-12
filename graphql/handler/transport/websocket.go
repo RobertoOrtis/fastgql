@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/arsmn/fastgql/graphql"
-	"github.com/arsmn/fastgql/graphql/errcode"
+	"github.com/RobertoOrtis/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql/errcode"
 	"github.com/fasthttp/websocket"
 	"github.com/valyala/fasthttp"
 	"github.com/vektah/gqlparser/v2/gqlerror"
@@ -126,9 +126,11 @@ func (c *wsConnection) init() bool {
 }
 
 func (c *wsConnection) write(msg *operationMessage) {
-	c.mu.Lock()
-	c.conn.WriteJSON(msg)
-	c.mu.Unlock()
+	if msg.Type == "data" {
+		c.mu.Lock()
+		c.conn.WriteJSON(msg)
+		c.mu.Unlock()
+	}
 }
 
 func (c *wsConnection) run() {
@@ -282,19 +284,49 @@ func (c *wsConnection) sendError(id string, errors ...*gqlerror.Error) {
 }
 
 func (c *wsConnection) sendConnectionError(format string, args ...interface{}) {
-	b, err := json.Marshal(&gqlerror.Error{Message: fmt.Sprintf(format, args...)})
-	if err != nil {
-		panic(err)
-	}
+	fmt.Println("sendConnectionError...1", args)
+	for i, observer := range c.active {
+		fmt.Println("closeing DONE? index" + i)
+		select {
+		case <- c.ctx.Done():
+			fmt.Println("closeing DONE?" + i, observer)
+			b, err := json.Marshal(&gqlerror.Error{Message: fmt.Sprintf(format, args...)})
+			if err != nil {
+				panic(err)
+			}
 
-	c.write(&operationMessage{Type: connectionErrorMsg, Payload: b})
+			c.write(&operationMessage{Type: connectionErrorMsg, Payload: b})
+		default:
+			fmt.Println("closing defautl" + i, observer)
+			c.mu.Lock()
+			closer := c.active[i]
+			c.mu.Unlock()
+
+			c.conn.Close()
+			closer()
+		}
+	}
+	// b, err := json.Marshal(&gqlerror.Error{Message: fmt.Sprintf(format, args...)})
+	// if err != nil {
+	// 	panic(err)
+	// }
+	//
+	// c.write(&operationMessage{Type: connectionErrorMsg, Payload: b})
 }
 
 func (c *wsConnection) readOp() *operationMessage {
 	_, r, err := c.conn.NextReader()
+	fmt.Println("read op...")
 	if websocket.IsCloseError(err, websocket.CloseNormalClosure, websocket.CloseNoStatusReceived) {
 		return nil
 	} else if err != nil {
+		mes := operationMessage{}
+		e := c.active
+		//jsonDecode(r, &mes)
+		// fmt.Println("readop sending error...i ", i)
+		fmt.Println("readop sending error...r ", r)
+		fmt.Println("readop sending error...e ", e)
+		fmt.Println("readop sending error...", mes)
 		c.sendConnectionError("invalid json: %T %s", err, err.Error())
 		return nil
 	}
@@ -305,9 +337,24 @@ func (c *wsConnection) readOp() *operationMessage {
 	}
 
 	return &message
+	// _, r, err := c.conn.NextReader()
+	// if websocket.IsCloseError(err, websocket.CloseNormalClosure, websocket.CloseNoStatusReceived) {
+	// 	return nil
+	// } else if err != nil {
+	// 	c.sendConnectionError("invalid json: %T %s", err, err.Error())
+	// 	return nil
+	// }
+	// message := operationMessage{}
+	// if err := jsonDecode(r, &message); err != nil {
+	// 	c.sendConnectionError("invalid json")
+	// 	return nil
+	// }
+	//
+	// return &message
 }
 
 func (c *wsConnection) close(closeCode int, message string) {
+	fmt.Println("- CLOSE -")
 	c.mu.Lock()
 	_ = c.conn.WriteMessage(websocket.CloseMessage, websocket.FormatCloseMessage(closeCode, message))
 	c.mu.Unlock()

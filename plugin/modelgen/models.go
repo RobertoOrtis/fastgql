@@ -5,9 +5,9 @@ import (
 	"go/types"
 	"sort"
 
-	"github.com/arsmn/fastgql/codegen/config"
-	"github.com/arsmn/fastgql/codegen/templates"
-	"github.com/arsmn/fastgql/plugin"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/codegen/templates"
+	"github.com/RobertoOrtis/fastgql/plugin"
 	"github.com/vektah/gqlparser/v2/ast"
 )
 
@@ -203,7 +203,7 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 		cfg.Models.Add(it.Name, cfg.Model.ImportPath()+"."+templates.ToGo(it.Name))
 	}
 	for _, it := range b.Scalars {
-		cfg.Models.Add(it, "github.com/arsmn/fastgql/graphql.String")
+		cfg.Models.Add(it, "github.com/RobertoOrtis/fastgql/graphql.String")
 	}
 
 	if len(b.Models) == 0 && len(b.Enums) == 0 && len(b.Interfaces) == 0 && len(b.Scalars) == 0 {

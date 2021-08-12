@@ -6,8 +6,8 @@ package graph
 import (
 	"context"
 
-	"github.com/arsmn/fastgql/example/federation/accounts/graph/generated"
-	"github.com/arsmn/fastgql/example/federation/accounts/graph/model"
+	"github.com/RobertoOrtis/fastgql/example/federation/accounts/graph/generated"
+	"github.com/RobertoOrtis/fastgql/example/federation/accounts/graph/model"
 )
 
 func (r *queryResolver) Me(ctx context.Context) (*model.User, error) {

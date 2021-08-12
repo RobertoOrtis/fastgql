@@ -8,15 +8,14 @@ model:
 
 models:
   ExistingModel:
-    model: github.com/arsmn/fastgql/plugin/modelgen/out.ExistingModel
+    model: github.com/RobertoOrtis/fastgql/plugin/modelgen/out.ExistingModel
   ExistingInput:
-    model: github.com/arsmn/fastgql/plugin/modelgen/out.ExistingInput
+    model: github.com/RobertoOrtis/fastgql/plugin/modelgen/out.ExistingInput
   ExistingEnum:
-    model: github.com/arsmn/fastgql/plugin/modelgen/out.ExistingEnum
+    model: github.com/RobertoOrtis/fastgql/plugin/modelgen/out.ExistingEnum
   ExistingInterface:
-    model: github.com/arsmn/fastgql/plugin/modelgen/out.ExistingInterface
+    model: github.com/RobertoOrtis/fastgql/plugin/modelgen/out.ExistingInterface
   ExistingUnion:
-    model: github.com/arsmn/fastgql/plugin/modelgen/out.ExistingUnion
+    model: github.com/RobertoOrtis/fastgql/plugin/modelgen/out.ExistingUnion
   ExistingType:
-    model: github.com/arsmn/fastgql/plugin/modelgen/out.ExistingType
-
+    model: github.com/RobertoOrtis/fastgql/plugin/modelgen/out.ExistingType

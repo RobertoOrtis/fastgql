@@ -3,7 +3,7 @@ package federation
 import (
 	"testing"
 
-	"github.com/arsmn/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
 	"github.com/stretchr/testify/require"
 )
 

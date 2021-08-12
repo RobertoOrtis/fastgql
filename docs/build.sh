@@ -46,7 +46,7 @@ rebuild() {
 currentBranch=$(git rev-parse --abbrev-ref HEAD)
 
 if ! git remote  | grep -q origin ; then
-    git remote add origin https://github.com/arsmn/fastgql
+    git remote add origin https://github.com/RobertoOrtis/fastgql
 fi
 git fetch origin --tags
 
@@ -59,4 +59,3 @@ done
 
 rm -rf content
 git checkout "$currentBranch" -- content
-

@@ -1,5 +1,5 @@
 models:
   Order:
-    model: github.com/arsmn/fastgql/example/dataloader.Order
+    model: github.com/RobertoOrtis/fastgql/example/dataloader.Order
   Customer:
-    model: github.com/arsmn/fastgql/example/dataloader.Customer
+    model: github.com/RobertoOrtis/fastgql/example/dataloader.Customer

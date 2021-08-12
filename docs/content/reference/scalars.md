@@ -110,7 +110,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/arsmn/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql"
 )
 
 
@@ -149,7 +149,7 @@ models:
 **Note:** you also can un/marshal to pointer types via this approach, simply accept a pointer in your
 `Marshal...` func and return one in your `Unmarshal...` func.
 
-See the [example/scalars](https://github.com/arsmn/fastgql/tree/master/example/scalars) package for more examples.
+See the [example/scalars](https://github.com/RobertoOrtis/fastgql/tree/master/example/scalars) package for more examples.
 
 ## Unmarshaling Errors
 
@@ -202,5 +202,3 @@ input ContactDetailsInput {
   ]
 }
 ```
-
-

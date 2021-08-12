@@ -4,12 +4,12 @@ import (
 	"path/filepath"
 	"syscall"
 
-	"github.com/arsmn/fastgql/internal/code"
+	"github.com/RobertoOrtis/fastgql/internal/code"
 
-	"github.com/arsmn/fastgql/codegen"
-	"github.com/arsmn/fastgql/codegen/config"
-	"github.com/arsmn/fastgql/codegen/templates"
-	"github.com/arsmn/fastgql/plugin"
+	"github.com/RobertoOrtis/fastgql/codegen"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/codegen/templates"
+	"github.com/RobertoOrtis/fastgql/plugin"
 )
 
 func New(filename string, typename string) plugin.Plugin {

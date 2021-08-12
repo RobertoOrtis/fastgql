@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/arsmn/fastgql/api"
-	"github.com/arsmn/fastgql/codegen/config"
-	"github.com/arsmn/fastgql/internal/code"
-	"github.com/arsmn/fastgql/plugin/servergen"
+	"github.com/RobertoOrtis/fastgql/api"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/internal/code"
+	"github.com/RobertoOrtis/fastgql/plugin/servergen"
 	"github.com/urfave/cli/v2"
 )
 
@@ -64,15 +64,15 @@ autobind:
 models:
   ID:
     model:
-      - github.com/arsmn/fastgql/graphql.ID
-      - github.com/arsmn/fastgql/graphql.Int
-      - github.com/arsmn/fastgql/graphql.Int64
-      - github.com/arsmn/fastgql/graphql.Int32
+      - github.com/RobertoOrtis/fastgql/graphql.ID
+      - github.com/RobertoOrtis/fastgql/graphql.Int
+      - github.com/RobertoOrtis/fastgql/graphql.Int64
+      - github.com/RobertoOrtis/fastgql/graphql.Int32
   Int:
     model:
-      - github.com/arsmn/fastgql/graphql.Int
-      - github.com/arsmn/fastgql/graphql.Int64
-      - github.com/arsmn/fastgql/graphql.Int32
+      - github.com/RobertoOrtis/fastgql/graphql.Int
+      - github.com/RobertoOrtis/fastgql/graphql.Int64
+      - github.com/RobertoOrtis/fastgql/graphql.Int32
 `))
 
 var schemaDefault = `# GraphQL schema example

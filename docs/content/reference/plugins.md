@@ -23,9 +23,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/arsmn/fastgql/api"
-	"github.com/arsmn/fastgql/codegen/config"
-	"github.com/arsmn/fastgql/plugin/stubgen"
+	"github.com/RobertoOrtis/fastgql/api"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/plugin/stubgen"
 )
 
 func main() {
@@ -53,9 +53,9 @@ There are currently only two hooks:
 
 - MutateConfig: Allows a plugin to mutate the config before codegen starts. This allows plugins to add
   custom directives, define types, and implement resolvers. see
-  [modelgen](https://github.com/arsmn/fastgql/tree/master/plugin/modelgen) for an example
+  [modelgen](https://github.com/RobertoOrtis/fastgql/tree/master/plugin/modelgen) for an example
 - GenerateCode: Allows a plugin to generate a new output file, see
-  [stubgen](https://github.com/arsmn/fastgql/tree/master/plugin/stubgen) for an example
+  [stubgen](https://github.com/RobertoOrtis/fastgql/tree/master/plugin/stubgen) for an example
 
-Take a look at [plugin.go](https://github.com/arsmn/fastgql/blob/master/plugin/plugin.go) for the full list of
+Take a look at [plugin.go](https://github.com/RobertoOrtis/fastgql/blob/master/plugin/plugin.go) for the full list of
 available hooks. These are likely to change with each release.

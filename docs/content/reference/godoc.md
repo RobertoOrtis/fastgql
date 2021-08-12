@@ -14,5 +14,5 @@ menu:
   main:
     parent: 'reference'
     weight: 0
-    url: https://godoc.org/github.com/arsmn/fastgql
+    url: https://godoc.org/github.com/RobertoOrtis/fastgql
 ---

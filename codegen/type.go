@@ -3,7 +3,7 @@ package codegen
 import (
 	"fmt"
 
-	"github.com/arsmn/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
 )
 
 func (b *builder) buildTypes() map[string]*config.TypeReference {

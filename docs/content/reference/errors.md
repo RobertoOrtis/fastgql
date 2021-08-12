@@ -21,7 +21,7 @@ import (
 	"context"
 
 	"github.com/vektah/gqlparser/v2/gqlerror"
-	"github.com/arsmn/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql"
 )
 
 func (r Query) DoThings(ctx context.Context) (bool, error) {
@@ -78,8 +78,8 @@ import (
 	"errors"
 
 	"github.com/vektah/gqlparser/v2/gqlerror"
-	"github.com/arsmn/fastgql/graphql"
-	"github.com/arsmn/fastgql/graphql/handler"
+	"github.com/RobertoOrtis/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql/handler"
 )
 
 func main() {
@@ -117,4 +117,3 @@ server.SetRecoverFunc(func(ctx context.Context, err interface{}) error {
     return errors.New("Internal server error!")
 })
 ```
-

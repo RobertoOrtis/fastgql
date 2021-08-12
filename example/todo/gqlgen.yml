@@ -1,7 +1,7 @@
 models:
   Todo:
-    model: github.com/arsmn/fastgql/example/todo.Todo
+    model: github.com/RobertoOrtis/fastgql/example/todo.Todo
   ID:
     model: # override the default id marshaller to use ints
-      - github.com/arsmn/fastgql/graphql.IntID
-      - github.com/arsmn/fastgql/graphql.ID
+      - github.com/RobertoOrtis/fastgql/graphql.IntID
+      - github.com/RobertoOrtis/fastgql/graphql.ID

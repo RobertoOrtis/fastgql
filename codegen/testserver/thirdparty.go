@@ -5,7 +5,7 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/arsmn/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql"
 )
 
 type ThirdParty struct {

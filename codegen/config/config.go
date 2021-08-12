@@ -9,7 +9,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/arsmn/fastgql/internal/code"
+	"github.com/RobertoOrtis/fastgql/internal/code"
 	"github.com/pkg/errors"
 	"github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
@@ -197,8 +197,8 @@ func (c *Config) Init() error {
 
 	// prefetch all packages in one big packages.Load call
 	pkgs := []string{
-		"github.com/arsmn/fastgql/graphql",
-		"github.com/arsmn/fastgql/graphql/introspection",
+		"github.com/RobertoOrtis/fastgql/graphql",
+		"github.com/RobertoOrtis/fastgql/graphql/introspection",
 	}
 	pkgs = append(pkgs, c.Models.ReferencedPackages()...)
 	pkgs = append(pkgs, c.AutoBind...)
@@ -546,26 +546,26 @@ func (c *Config) autobind() error {
 
 func (c *Config) injectBuiltins() {
 	builtins := TypeMap{
-		"__Directive":         {Model: StringList{"github.com/arsmn/fastgql/graphql/introspection.Directive"}},
-		"__DirectiveLocation": {Model: StringList{"github.com/arsmn/fastgql/graphql.String"}},
-		"__Type":              {Model: StringList{"github.com/arsmn/fastgql/graphql/introspection.Type"}},
-		"__TypeKind":          {Model: StringList{"github.com/arsmn/fastgql/graphql.String"}},
-		"__Field":             {Model: StringList{"github.com/arsmn/fastgql/graphql/introspection.Field"}},
-		"__EnumValue":         {Model: StringList{"github.com/arsmn/fastgql/graphql/introspection.EnumValue"}},
-		"__InputValue":        {Model: StringList{"github.com/arsmn/fastgql/graphql/introspection.InputValue"}},
-		"__Schema":            {Model: StringList{"github.com/arsmn/fastgql/graphql/introspection.Schema"}},
-		"Float":               {Model: StringList{"github.com/arsmn/fastgql/graphql.Float"}},
-		"String":              {Model: StringList{"github.com/arsmn/fastgql/graphql.String"}},
-		"Boolean":             {Model: StringList{"github.com/arsmn/fastgql/graphql.Boolean"}},
+		"__Directive":         {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql/introspection.Directive"}},
+		"__DirectiveLocation": {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.String"}},
+		"__Type":              {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql/introspection.Type"}},
+		"__TypeKind":          {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.String"}},
+		"__Field":             {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql/introspection.Field"}},
+		"__EnumValue":         {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql/introspection.EnumValue"}},
+		"__InputValue":        {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql/introspection.InputValue"}},
+		"__Schema":            {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql/introspection.Schema"}},
+		"Float":               {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.Float"}},
+		"String":              {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.String"}},
+		"Boolean":             {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.Boolean"}},
 		"Int": {Model: StringList{
-			"github.com/arsmn/fastgql/graphql.Int",
-			"github.com/arsmn/fastgql/graphql.Int32",
-			"github.com/arsmn/fastgql/graphql.Int64",
+			"github.com/RobertoOrtis/fastgql/graphql.Int",
+			"github.com/RobertoOrtis/fastgql/graphql.Int32",
+			"github.com/RobertoOrtis/fastgql/graphql.Int64",
 		}},
 		"ID": {
 			Model: StringList{
-				"github.com/arsmn/fastgql/graphql.ID",
-				"github.com/arsmn/fastgql/graphql.IntID",
+				"github.com/RobertoOrtis/fastgql/graphql.ID",
+				"github.com/RobertoOrtis/fastgql/graphql.IntID",
 			},
 		},
 	}
@@ -578,10 +578,10 @@ func (c *Config) injectBuiltins() {
 
 	// These are additional types that are injected if defined in the schema as scalars.
 	extraBuiltins := TypeMap{
-		"Time":   {Model: StringList{"github.com/arsmn/fastgql/graphql.Time"}},
-		"Map":    {Model: StringList{"github.com/arsmn/fastgql/graphql.Map"}},
-		"Upload": {Model: StringList{"github.com/arsmn/fastgql/graphql.Upload"}},
-		"Any":    {Model: StringList{"github.com/arsmn/fastgql/graphql.Any"}},
+		"Time":   {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.Time"}},
+		"Map":    {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.Map"}},
+		"Upload": {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.Upload"}},
+		"Any":    {Model: StringList{"github.com/RobertoOrtis/fastgql/graphql.Any"}},
 	}
 
 	for typeName, entry := range extraBuiltins {

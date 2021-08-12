@@ -3,8 +3,8 @@ package transport_test
 import (
 	"testing"
 
-	"github.com/arsmn/fastgql/graphql/handler/testserver"
-	"github.com/arsmn/fastgql/graphql/handler/transport"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/testserver"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/transport"
 	"github.com/stretchr/testify/assert"
 	"github.com/valyala/fasthttp"
 )

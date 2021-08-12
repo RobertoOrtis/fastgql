@@ -1,6 +1,6 @@
 package graph
 
-import "github.com/arsmn/fastgql/example/federation/reviews/graph/model"
+import "github.com/RobertoOrtis/fastgql/example/federation/reviews/graph/model"
 
 var reviews = []*model.Review{
 	{

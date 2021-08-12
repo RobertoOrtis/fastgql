@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/arsmn/fastgql/codegen/config"
-	"github.com/arsmn/fastgql/plugin"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/plugin"
 )
 
 type Option func(cfg *config.Config, plugins *[]plugin.Plugin)

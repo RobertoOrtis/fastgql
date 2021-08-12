@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/arsmn/fastgql/graphql"
-	"github.com/arsmn/fastgql/graphql/executor"
-	"github.com/arsmn/fastgql/graphql/handler/extension"
-	"github.com/arsmn/fastgql/graphql/handler/lru"
-	"github.com/arsmn/fastgql/graphql/handler/transport"
+	"github.com/RobertoOrtis/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql/executor"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/extension"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/lru"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/transport"
 	"github.com/valyala/fasthttp"
 	"github.com/vektah/gqlparser/v2/gqlerror"
 )

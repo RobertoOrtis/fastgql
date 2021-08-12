@@ -1,5 +1,5 @@
 type User
-@goModel(model:"github.com/arsmn/fastgql/example/config.User") {
+@goModel(model:"github.com/RobertoOrtis/fastgql/example/config.User") {
   id: ID!
   name: String! @goField(name:"FullName")
 }

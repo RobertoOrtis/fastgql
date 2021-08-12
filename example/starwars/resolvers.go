@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/arsmn/fastgql/example/starwars/generated"
+	"github.com/RobertoOrtis/fastgql/example/starwars/generated"
 
-	"github.com/arsmn/fastgql/example/starwars/models"
+	"github.com/RobertoOrtis/fastgql/example/starwars/models"
 )
 
 type Resolver struct {

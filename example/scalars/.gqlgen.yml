@@ -3,18 +3,18 @@ model:
 
 models:
   User:
-    model: github.com/arsmn/fastgql/example/scalars/model.User
+    model: github.com/RobertoOrtis/fastgql/example/scalars/model.User
   Timestamp:
-    model: github.com/arsmn/fastgql/example/scalars/model.Timestamp
+    model: github.com/RobertoOrtis/fastgql/example/scalars/model.Timestamp
   SearchArgs:
-    model: github.com/arsmn/fastgql/example/scalars/model.SearchArgs
+    model: github.com/RobertoOrtis/fastgql/example/scalars/model.SearchArgs
   Point:
-    model: github.com/arsmn/fastgql/example/scalars/model.Point
+    model: github.com/RobertoOrtis/fastgql/example/scalars/model.Point
   ID:
-    model: github.com/arsmn/fastgql/example/scalars/model.ID
+    model: github.com/RobertoOrtis/fastgql/example/scalars/model.ID
   Tier:
-    model: github.com/arsmn/fastgql/example/scalars/model.Tier
+    model: github.com/RobertoOrtis/fastgql/example/scalars/model.Tier
   Banned:
-    model: github.com/arsmn/fastgql/example/scalars/model.Banned
+    model: github.com/RobertoOrtis/fastgql/example/scalars/model.Banned
   DarkMode:
-    model: github.com/arsmn/fastgql/example/scalars/model.Preferences
+    model: github.com/RobertoOrtis/fastgql/example/scalars/model.Preferences

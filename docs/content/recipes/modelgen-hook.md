@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/arsmn/fastgql/api"
-	"github.com/arsmn/fastgql/codegen/config"
-	"github.com/arsmn/fastgql/plugin/modelgen"
+	"github.com/RobertoOrtis/fastgql/api"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/plugin/modelgen"
 )
 
 // Defining mutation function

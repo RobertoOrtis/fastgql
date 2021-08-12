@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/arsmn/fastgql/codegen/config"
-	"github.com/arsmn/fastgql/plugin/modelgen/out"
+	"github.com/RobertoOrtis/fastgql/codegen/config"
+	"github.com/RobertoOrtis/fastgql/plugin/modelgen/out"
 	"github.com/stretchr/testify/require"
 )
 

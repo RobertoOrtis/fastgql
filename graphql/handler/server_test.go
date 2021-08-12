@@ -6,9 +6,9 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/arsmn/fastgql/graphql"
-	"github.com/arsmn/fastgql/graphql/handler/testserver"
-	"github.com/arsmn/fastgql/graphql/handler/transport"
+	"github.com/RobertoOrtis/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/testserver"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/transport"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/valyala/fasthttp"

@@ -3,7 +3,7 @@
 {{ reserveImport "fmt"  }}
 {{ reserveImport "strings"  }}
 
-{{ reserveImport "github.com/arsmn/fastgql/plugin/federation/fedruntime" }}
+{{ reserveImport "github.com/RobertoOrtis/fastgql/plugin/federation/fedruntime" }}
 
 func (ec *executionContext) __resolve__service(ctx context.Context) (fedruntime.Service, error) {
 	if ec.DisableIntrospection {

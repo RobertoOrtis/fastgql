@@ -11,4 +11,4 @@ resolver:
 
 models:
   Resolver:
-    model: github.com/arsmn/fastgql/plugin/resolvergen/testdata/singlefile/out.Resolver
+    model: github.com/RobertoOrtis/fastgql/plugin/resolvergen/testdata/singlefile/out.Resolver

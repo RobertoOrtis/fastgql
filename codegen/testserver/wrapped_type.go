@@ -1,6 +1,6 @@
 package testserver
 
-import "github.com/arsmn/fastgql/codegen/testserver/otherpkg"
+import "github.com/RobertoOrtis/fastgql/codegen/testserver/otherpkg"
 
 type WrappedScalar = otherpkg.Scalar
 type WrappedStruct otherpkg.Struct

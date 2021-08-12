@@ -4,7 +4,7 @@ model:
   filename: models/generated.go
 
 autobind:
-  - github.com/arsmn/fastgql/example/starwars/models
+  - github.com/RobertoOrtis/fastgql/example/starwars/models
 
 models:
   ReviewInput:

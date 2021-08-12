@@ -25,9 +25,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/arsmn/fastgql/graphql/handler"
-	"github.com/arsmn/fastgql/graphql/handler/extension"
-	"github.com/arsmn/fastgql/graphql/handler/transport"
+	"github.com/RobertoOrtis/fastgql/graphql/handler"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/extension"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/transport"
 	"github.com/go-redis/redis"
 )
 

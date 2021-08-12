@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	todo "github.com/arsmn/fastgql/example/config"
-	"github.com/arsmn/fastgql/graphql/handler"
-	"github.com/arsmn/fastgql/graphql/playground"
+	todo "github.com/RobertoOrtis/fastgql/example/config"
+	"github.com/RobertoOrtis/fastgql/graphql/handler"
+	"github.com/RobertoOrtis/fastgql/graphql/playground"
 	"github.com/valyala/fasthttp"
 )
 

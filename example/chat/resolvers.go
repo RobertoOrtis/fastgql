@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/arsmn/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql"
 )
 
 type ckey string

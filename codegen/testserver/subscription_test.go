@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/arsmn/fastgql/graphql/handler/transport"
+	"github.com/RobertoOrtis/fastgql/graphql/handler/transport"
 
-	"github.com/arsmn/fastgql/client"
-	"github.com/arsmn/fastgql/graphql"
-	"github.com/arsmn/fastgql/graphql/handler"
+	"github.com/RobertoOrtis/fastgql/client"
+	"github.com/RobertoOrtis/fastgql/graphql"
+	"github.com/RobertoOrtis/fastgql/graphql/handler"
 	"github.com/stretchr/testify/require"
 )
 

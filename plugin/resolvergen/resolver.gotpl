@@ -9,8 +9,8 @@
 
 {{ reserveImport "github.com/vektah/gqlparser/v2" }}
 {{ reserveImport "github.com/vektah/gqlparser/v2/ast" }}
-{{ reserveImport "github.com/arsmn/fastgql/graphql" }}
-{{ reserveImport "github.com/arsmn/fastgql/graphql/introspection" }}
+{{ reserveImport "github.com/RobertoOrtis/fastgql/graphql" }}
+{{ reserveImport "github.com/RobertoOrtis/fastgql/graphql/introspection" }}
 
 {{ .Imports }}
 

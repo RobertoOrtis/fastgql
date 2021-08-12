@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/arsmn/fastgql/client"
-	"github.com/arsmn/fastgql/codegen/testserver/otherpkg"
-	"github.com/arsmn/fastgql/graphql/handler"
+	"github.com/RobertoOrtis/fastgql/client"
+	"github.com/RobertoOrtis/fastgql/codegen/testserver/otherpkg"
+	"github.com/RobertoOrtis/fastgql/graphql/handler"
 	"github.com/stretchr/testify/require"
 )
 

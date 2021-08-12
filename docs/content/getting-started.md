@@ -22,7 +22,7 @@ Create a directory for your project, and initialise it as a Go Module:
 $ mkdir gqlgen-todos
 $ cd gqlgen-todos
 $ go mod init github.com/[username]/gqlgen-todos
-$ go get github.com/arsmn/fastgql
+$ go get github.com/RobertoOrtis/fastgql
 ```
 
 ## Building the server
@@ -30,7 +30,7 @@ $ go get github.com/arsmn/fastgql
 ### Create the project skeleton
 
 ```bash
-$ go run github.com/arsmn/fastgql init
+$ go run github.com/RobertoOrtis/fastgql init
 ```
 
 This will create our suggested package layout. You can modify these paths in gqlgen.yml if you need to.
@@ -178,7 +178,7 @@ type Todo struct {
 >
 > By default gqlgen will use any models in the model directory that match on name, this can be configured in `gqlgen.yml`.
 
-And run `go run github.com/arsmn/fastgql generate`.
+And run `go run github.com/RobertoOrtis/fastgql generate`.
 
 Now if we look in `graph/schema.resolvers.go` we can see a new resolver, lets implement it and fix `CreateTodo`.
 ```go
@@ -202,7 +202,7 @@ func (r *todoResolver) User(ctx context.Context, obj *model.Todo) (*model.User, 
 At the top of our `resolver.go`, between `package` and `import`, add the following line:
 
 ```go
-//go:generate go run github.com/arsmn/fastgql
+//go:generate go run github.com/RobertoOrtis/fastgql
 ```
 
 This magic comment tells `go generate` what command to run when we want to regenerate our code.  To run go generate recursively over your entire project, use this command:

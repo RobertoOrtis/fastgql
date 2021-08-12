@@ -12,11 +12,11 @@ resolver:
 
 models:
   Element:
-    model: github.com/arsmn/fastgql/integration/models-go.Element
+    model: github.com/RobertoOrtis/fastgql/integration/models-go.Element
   Viewer:
-    model: github.com/arsmn/fastgql/integration/models-go.Viewer
+    model: github.com/RobertoOrtis/fastgql/integration/models-go.Viewer
   User:
-    model: github.com/arsmn/fastgql/integration/remote_api.User
+    model: github.com/RobertoOrtis/fastgql/integration/remote_api.User
     fields:
       likes:
         resolver: true

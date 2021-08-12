@@ -34,7 +34,7 @@ resolver:
 # gqlgen will search for any type names in the schema in these go packages
 # if they match it will use them, otherwise it will generate them.
 autobind:
-  - "github.com/arsmn/fastgql/example/federation/accounts/graph/model"
+  - "github.com/RobertoOrtis/fastgql/example/federation/accounts/graph/model"
 
 # This section declares type mapping between the GraphQL and go type systems
 #
@@ -44,12 +44,12 @@ autobind:
 models:
   ID:
     model:
-      - github.com/arsmn/fastgql/graphql.ID
-      - github.com/arsmn/fastgql/graphql.Int
-      - github.com/arsmn/fastgql/graphql.Int64
-      - github.com/arsmn/fastgql/graphql.Int32
+      - github.com/RobertoOrtis/fastgql/graphql.ID
+      - github.com/RobertoOrtis/fastgql/graphql.Int
+      - github.com/RobertoOrtis/fastgql/graphql.Int64
+      - github.com/RobertoOrtis/fastgql/graphql.Int32
   Int:
     model:
-      - github.com/arsmn/fastgql/graphql.Int
-      - github.com/arsmn/fastgql/graphql.Int64
-      - github.com/arsmn/fastgql/graphql.Int32
+      - github.com/RobertoOrtis/fastgql/graphql.Int
+      - github.com/RobertoOrtis/fastgql/graphql.Int64
+      - github.com/RobertoOrtis/fastgql/graphql.Int32

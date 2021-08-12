@@ -6,8 +6,8 @@ package graph
 import (
 	"context"
 
-	"github.com/arsmn/fastgql/example/federation/reviews/graph/generated"
-	"github.com/arsmn/fastgql/example/federation/reviews/graph/model"
+	"github.com/RobertoOrtis/fastgql/example/federation/reviews/graph/generated"
+	"github.com/RobertoOrtis/fastgql/example/federation/reviews/graph/model"
 )
 
 func (r *productResolver) Reviews(ctx context.Context, obj *model.Product) ([]*model.Review, error) {

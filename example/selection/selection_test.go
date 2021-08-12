@@ -3,8 +3,8 @@ package selection
 import (
 	"testing"
 
-	"github.com/arsmn/fastgql/client"
-	"github.com/arsmn/fastgql/graphql/handler"
+	"github.com/RobertoOrtis/fastgql/client"
+	"github.com/RobertoOrtis/fastgql/graphql/handler"
 	"github.com/stretchr/testify/require"
 )
 
